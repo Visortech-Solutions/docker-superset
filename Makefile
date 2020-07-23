@@ -1,8 +1,8 @@
-REPO             := amancevice/superset
+REPO             := victorck/superset
 STAGES           := build dist final
 NODE_VERSION     := 12
 PYTHON_VERSION   := 3.6
-SUPERSET_VERSION := 0.37.0rc2
+SUPERSET_VERSION := 0.37-chelule
 
 .PHONY: default clean clobber edge latest push
 

@@ -2,7 +2,7 @@ REPO             := visortech/superset
 STAGES           := build dist final
 NODE_VERSION     := 12
 PYTHON_VERSION   := 3.6
-SUPERSET_VERSION := 0.37-visortech
+SUPERSET_VERSION := 0.37.2-sl-moh
 
 .PHONY: default clean clobber edge latest push
 

@@ -13,7 +13,7 @@ This project is unofficial and not related to Superset or Apache.
 Download this image from the Docker registry:
 
 ```bash
-docker pull amancevice/superset:<version>
+docker pull visortech/superset:<version>
 ```
 
 ## Building

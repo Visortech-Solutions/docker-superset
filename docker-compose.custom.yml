@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis
+    restart: always
+
+  superset:
+    restart: on-failure
+    container_name: superset
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8088:8088"
+    build:
+      context: .
+      args:
+        - NODE_VERSION=12
+        - PYTHON_VERSION=3.6
+    volumes:
+      - ./examples/postgres/superset_config.py:/etc/superset/superset_config.py
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: superset
+      POSTGRES_PASSWORD: superset
+      POSTGRES_USER: superset
